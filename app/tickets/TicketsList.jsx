@@ -1,6 +1,9 @@
 import Link from "next/link";
 
 async function getTicketsData() {
+    // imitate delay 
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
     // ! RUN THE JSON SERVER FIRST FOR THE FAKE API
     const res = await fetch("http://localhost:4000/tickets", {
         next: {
